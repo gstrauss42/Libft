@@ -1,28 +1,30 @@
 #include <string.h>
 #include <stdio.h>
+#include <stdlib.h>
 
-void *ft_memset(void *b, int c, size_t len)
+void *ft_memset(unsigned char *b, int c, size_t len)
 {
-	size_t i;
+	int i;
 	unsigned char *ab;
-	unsigned char aa;
-	aa =
-	ab = (unsigned char *) b;	
 	i = 0;
+	printf("%s\n", b);
+	b = (unsigned char *)malloc(25 * sizeof(char));
 	while(i < len)
 	{
-		ab[i] = c;
+		b[i] = c;
 		i++;
 	}
-	return(ab);
+	return(b);
 }
 
 int main()
 {
-	void *b = "hello there";
-	int c = 65;
-	size_t len = 4;
-	printf("%p", ft_memset(b, c, len));
-	return(0);
-}
+    char str[50] = "GeeksForGeeks is for programming geeks.";
+    printf("\nBefore memset(): %s\n", str);
 
+    // Fill 8 characters starting from str[13] with '.'
+    memset(str, '.', 8*sizeof(char));
+
+    printf("After memset():  %s", str);
+    return 0;
+}
