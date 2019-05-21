@@ -1,11 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
-void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void *ft_memcpy(void  *dst, const void *src, size_t n)
 {
 	int i;
 	char *dest, *source;
-
+	
 	dest = (char *)dst;
 	source= (char *)src;
 	i = 0;
@@ -14,6 +15,9 @@ void *ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 		dest[i] = source[i];
 		i++;
 	}
+	i = 0;
+	while(dest[i] != '\0')
+		i++;
 	return(dest);
 }
 
