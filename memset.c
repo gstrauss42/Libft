@@ -17,7 +17,6 @@ void *ft_memset(char *b, int c, size_t len)
 int main()
 {
     char str[12] = "Hello there";
-
     printf("%s", ft_memset(str, '.', 4 * sizeof(char)));
     return 0;
 }
