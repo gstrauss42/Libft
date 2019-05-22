@@ -1,0 +1,20 @@
+makefile
+norm
+42 header thing
+remove headers and mains
+additional case checking
+author file
+read questions again
+check all file functionality
+
+memchr
+memcmp
+strncat
+strlcat
+strchr
+strrchr
+strnstr
+strcmp
+strncmp
+isalnum
+
