@@ -7,8 +7,6 @@ author file
 read questions again
 check all file functionality
 
-memchr
-memcmp
 strncat
 strlcat
 strchr
@@ -17,4 +15,3 @@ strnstr
 strcmp
 strncmp
 isalnum
-
