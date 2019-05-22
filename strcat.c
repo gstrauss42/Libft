@@ -32,7 +32,7 @@ char *ft_strcat(char *s1, const char *s2)
 int main()
 {
 	char a[12] = "Hello there";
-	char b[12] = "Hello there";
+	char b[12] = "Hello";
 	printf("%s", ft_strcat(a, b));
 	return(0);
 }
