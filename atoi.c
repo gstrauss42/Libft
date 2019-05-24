@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int atoi(char *a)
+int ft_atoi(char *a)
 {
 	int i, b, ret;
 	
@@ -19,6 +19,6 @@ int atoi(char *a)
 
 int main(int argc, char **argv)
 {
-	printf("%d", atoi(argv[1]));
+	printf("%d", ft_atoi(argv[1]));
 	return(0);
 }

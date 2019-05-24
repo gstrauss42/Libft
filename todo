@@ -7,11 +7,4 @@ author file
 read questions again
 check all file functionality
 
-strncat
-strlcat
-strchr
-strrchr
-strnstr
-strcmp
-strncmp
-isalnum
+strnstr.c
