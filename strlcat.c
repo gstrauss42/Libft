@@ -1,22 +1,26 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   strlcat.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/27 10:07:06 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/05/27 10:41:33 by gstrauss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <string.h>
 
 size_t ft_strlcat(char * dst, const char * src, size_t dstsize)
 {
 	int i, o;
 	i = 0;
+	o = 0;
 	while(dst[i] != '\0')
 		i++;
 	while(src[o] != '\0')
 		o++;
 	i = i + o - 1;
 	return(i);
-}
-
-int main()
-{
-	char dst[12] = "Hello there";
-	char src[12] = "Hello there";
-	printf("%zu", ft_strlcat(dst, src, 11));
-	return(0);
 }

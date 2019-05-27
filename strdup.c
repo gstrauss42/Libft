@@ -1,4 +1,15 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   strdup.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/27 10:06:37 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/05/27 10:06:47 by gstrauss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 
 char *strdup(const char *str)
@@ -16,11 +27,4 @@ char *strdup(const char *str)
 		i++;
 	}
 	return(a);
-}
-
-int main()
-{
-	char s1[6] = "hello";
-	printf("%s", strdup(s1));
-	return(0);
 }

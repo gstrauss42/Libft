@@ -1,4 +1,15 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   memcpy.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/27 10:03:56 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/05/27 10:04:03 by gstrauss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include <string.h>
 
@@ -19,12 +30,4 @@ void *ft_memcpy(void  *dst, const void *src, size_t n)
 	while(dest[i] != '\0')
 		i++;
 	return(dest);
-}
-
-int main()
-{
-	char src[12] = "Hello There";
-	char dst[12] = "abcdefghijk";
-	printf("%s", ft_memcpy(dst, src, 4 * sizeof(char)));
-	return(0);
 }

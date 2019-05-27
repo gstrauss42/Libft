@@ -1,4 +1,15 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   memchr.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/27 10:02:16 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/05/27 10:02:18 by gstrauss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <string.h>
 
 void *ft_memchr(const void *s, int c, size_t n)
@@ -16,11 +27,4 @@ void *ft_memchr(const void *s, int c, size_t n)
 		i++;
 	}
 	return(NULL);
-}
-
-int main()
-{
-	char s[12] = "Hello there";
-	printf("%s", memchr(s, 'o', 5 * sizeof(char)));
-	return(0);
 }

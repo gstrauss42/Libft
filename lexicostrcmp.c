@@ -1,4 +1,14 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   lexicostrcmp.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/27 10:01:31 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/05/27 10:28:50 by gstrauss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 int ft_strcmp(const char *s1, const char *s2)
 {
@@ -57,13 +67,5 @@ int ft_strcmp(const char *s1, const char *s2)
 		}
 		ascii++;
 	}
-	return(0);
-}
-
-int main()
-{
-	char s1[12] = "abc";
-	char s2[12] = "abc";
-	printf("%d", ft_strcmp(s1, s2));
 	return(0);
 }

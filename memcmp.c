@@ -1,4 +1,15 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   memcmp.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/27 10:03:31 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/05/27 10:03:33 by gstrauss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <string.h>
 
 int ft_memcmp(const void *s1, const void *s2, size_t n)
@@ -26,13 +37,5 @@ int ft_memcmp(const void *s1, const void *s2, size_t n)
 			}
 		}
 	}
-	return(0);
-}
-
-int main()
-{
-	char s1[12] = "aello there";
-	char s2[12] = "aello there";
-	printf("%c", ft_memcmp(s1, s2, 10));
 	return(0);
 }

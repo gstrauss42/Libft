@@ -1,4 +1,15 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   memmove.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/27 10:04:23 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/05/27 10:04:24 by gstrauss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <string.h>
 
 void *ft_memmove(void *dst, const void *src, size_t len)
@@ -14,12 +25,4 @@ void *ft_memmove(void *dst, const void *src, size_t len)
 		i++;
 	}
 	return(dest);
-}
-
-int main()
-{
-	char dst[6] = "hello";
-	char src[12] = "hello there";
-	printf("%s", ft_memmove(dst, src, 7 *sizeof(char)));
-	return(0);
 }

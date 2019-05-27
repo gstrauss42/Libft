@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   toupper.c                                          :+:      :+:    :+:   */
+/*   memalloc.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 10:10:49 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/27 10:10:51 by gstrauss         ###   ########.fr       */
+/*   Created: 2019/05/27 12:05:45 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/05/27 12:08:49 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int toupper(int c)
+#include <string.h>
+
+void *	ft_memalloc(size_t size)
 {
-	if(c > 96 && c < 123)
-		c = c - 32;
-	else
-		return(c);
-	return(c);
+	void a;
+	a = 0;
+	a = (void *) malloc(size);
+	return(a);
 }

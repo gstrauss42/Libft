@@ -1,4 +1,15 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   strrchr.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/27 10:09:26 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/05/27 10:09:28 by gstrauss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <string.h>
 
 char *ft_strrchr(char *s, int c)
@@ -19,11 +30,4 @@ char *ft_strrchr(char *s, int c)
 		i--;
 	}
 	return(NULL);
-}
-
-int main()
-{
-	char s[12] = " Hello there";
-	printf("%s", ft_strrchr(s, 'e'));
-	return(0);
 }

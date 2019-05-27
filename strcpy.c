@@ -1,4 +1,14 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   strcpy.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/27 10:06:16 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/05/27 10:06:18 by gstrauss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 char *ft_strcpy(char *dst, const char * src)
 {	
@@ -13,12 +23,4 @@ char *ft_strcpy(char *dst, const char * src)
 		i++;
 	}
 	return(dst);
-}
-
-int main()
-{
-	char src[12] = "Hello ts";
-	char dst[10] = "hello";
-	printf("%s",ft_strcpy(dst, src));
-	return(0);
 }

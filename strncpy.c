@@ -1,4 +1,15 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   strncpy.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/27 10:08:36 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/05/27 10:08:37 by gstrauss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <string.h>
 
 char *ft_strncpy(char *dst, const char * src, size_t len)
@@ -20,13 +31,4 @@ char *ft_strncpy(char *dst, const char * src, size_t len)
 		i++;
 	}
 	return(dst);
-}
-
-int main()
-{
-	char dst[20] = "";
-	char src[20] = "Hello there";
-	int len = 21;
-	printf("%s", ft_strncpy(dst, src, len));
-	return(0);
 }

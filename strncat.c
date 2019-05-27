@@ -1,4 +1,15 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   strncat.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/27 10:07:43 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/05/27 10:07:46 by gstrauss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include <string.h>
 
@@ -27,14 +38,4 @@ char *ft_strcat(char *s1, const char *s2, size_t n)
 	}
 	ret[i] = '\0';
 	return(ret);
-}
-
-int main()
-{
-	char a[12] = "Hello there";
-	int n;
-	n = 1;
-	char b[60] = "He                                     llo";
-	printf("%s", ft_strcat(a, b, n));
-	return(0);
 }

@@ -1,24 +1,30 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   atoi.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/27 09:59:03 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/05/27 11:38:57 by gstrauss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_atoi(char *a)
+int		ft_atoi(char *a)
 {
-	int i, b, ret;
-	
+	int i;
+	int	b;
+	int	ret;
+
 	i = 0;
-	while(a[i] != '\0')
+	while (a[i] != '\0')
 	{
 		b = a[i] - 48;
-		if(i == 0)
+		if (i == 0)
 			ret = b;
 		else
-			ret = b + ret *10;
+			ret = b + ret * 10;
 		i++;
 	}
-	return(ret);
-}
-
-int main(int argc, char **argv)
-{
-	printf("%d", ft_atoi(argv[1]));
-	return(0);
+	return (ret);
 }

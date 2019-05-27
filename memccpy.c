@@ -1,5 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   memccpy.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/27 10:01:13 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/05/27 10:01:18 by gstrauss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <string.h>
-#include <stdio.h>
 
 unsigned char *ft_memccpy(void *dst, const void *src, int c,size_t n)
 {
@@ -19,14 +30,4 @@ unsigned char *ft_memccpy(void *dst, const void *src, int c,size_t n)
 	while(source[i] != '\0')
 		i++;
 	return(&dest[i]);
-}
-
-int main()
-{
-	char src[12] = "Hello there";
-	char dst[12] = "Hello there";
-	char c;
-	c = 'e';
-	printf("%s", ft_memccpy(dst, src, c, 5 * sizeof(char)));
-	return(0);
 }

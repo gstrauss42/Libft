@@ -1,4 +1,16 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   strstr.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/27 10:09:57 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/05/27 10:13:08 by gstrauss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <string.h>
 
 char *ft_strstr(char *a, char *b)
 {
@@ -23,11 +35,4 @@ char *ft_strstr(char *a, char *b)
 		i = 0;
 	}
 	return(NULL);
-}
-
-int main()
-{
-	char a[12] = "hello there";
-	char b[6] = "llo";	
-	printf("%s", ft_strstr(b, a));
 }

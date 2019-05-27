@@ -1,4 +1,15 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   strncmp.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/27 10:08:10 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/05/27 10:08:12 by gstrauss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <string.h>
 
 int ft_strncmp(const char *s1, const char *s2, size_t n)
@@ -14,15 +25,5 @@ int ft_strncmp(const char *s1, const char *s2, size_t n)
 		}
 		i++;
 	}
-	return(0);
-}
-
-int main()
-{
-	char s1[12] = "Hello therea";
-	char s2[12] = "Hello therez";
-	int n;
-	n = 10;
-	printf("%d", ft_strncmp(s1, s2, n));
 	return(0);
 }

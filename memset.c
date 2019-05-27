@@ -1,5 +1,16 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   memset.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/27 10:04:44 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/05/27 10:04:46 by gstrauss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <string.h>
-#include <stdio.h>
 #include <stdlib.h>
 
 void *ft_memset(char *b, int c, size_t len)
@@ -12,11 +23,4 @@ void *ft_memset(char *b, int c, size_t len)
 		i++;
 	}
 	return(b);
-}
-
-int main()
-{
-    char str[12] = "Hello there";
-    printf("%s", ft_memset(str, '.', 4 * sizeof(char)));
-    return 0;
 }
