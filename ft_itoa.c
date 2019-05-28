@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strstr.c                                           :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 10:09:57 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/28 09:28:42 by gstrauss         ###   ########.fr       */
+/*   Created: 2019/05/28 08:46:57 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/05/28 09:26:28 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-char *ft_strstr(char *a, char *b)
+char *	ft_itoa(int n)
 {
-	int i, o, q;
-
-	i = 0;
-	o = 0;
-	if(a[0] == '\0')
-		return(b);
-	while(b[o] != '\0')
+	char * ret;
+	int i;
+	int z;
+	int c;
+	c = 0;
+	z = 0;
+	i = 1;
+	while(n / i != 0)
 	{
-		while (a[i] == b[o])
-		{
-			if(i == 0)
-				q = o;
-			i++;
-			o++;
-			if (a[i] == '\0')
-				return(&b[q]);
-		}
-		o++;
-		i = 0;
+		i = i * 10;
+		c++;
 	}
-	return(NULL);
+	i = i / 10;
+	while(c > 0)
+	{
+		ret[z] = n / i;
+		n = n - ((n / i) * i);
+	}
+	return(ret);
 }
