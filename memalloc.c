@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:05:45 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/29 12:48:00 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/05/29 14:51:32 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void *	ft_memalloc(size_t size)
 {
-	void a;
+	void * a;
 	a = 0;
 	a = (void *) malloc(size);
 	return(a);

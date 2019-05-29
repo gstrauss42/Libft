@@ -20,7 +20,6 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void *	ft_memcpy(void *dst, const void *src, size_t n);
 void *	ft_memmove(void *dst, const void *src, size_t len);
 void *	ft_memset(char *b, int c, size_t len);
-void	ft_putnbr(int n);
 char *	ft_strcat(char *s1, const char *s2);
 char *	ft_strchr(char *s, int c);
 int		ft_strcmp(const char *s1, const char *s2);

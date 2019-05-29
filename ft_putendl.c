@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 12:39:49 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/29 12:39:50 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/05/29 14:43:11 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,13 @@ void	ft_putdendl(char const *s)
 {
 	int i;
 	i = 0;
+	char a;
+	a = '\n';
 	while(s[i] != '\0')
 	{
 		write(1, &s[i], 1);
 		i++;
 	}
-	write(1, '\n', 1);
+	write(1, &a, 1);
 	return;
 }
