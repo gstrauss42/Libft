@@ -6,9 +6,11 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 12:36:02 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/29 12:36:08 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/05/29 13:09:58 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putstr(char const *s)
 {

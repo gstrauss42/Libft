@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 12:46:48 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/29 12:58:21 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/05/29 13:06:20 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@ char *	ft_strtrim(char const *s)
 	while(s[end] != '\0')
 		end++;
 	ret =(char *) malloc (end * sizeof(char));
-	while(s[i] == ((' ' || '\n') || '\t'))
+	while(s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 		i++;
-	while(s[end] == ((' ' || '\n') || '\t'))
+	while(s[end] == ' ' || s[end] == '\n' || s[end] == '\t')
 		end--;
 	while(i <= end)
 	{
