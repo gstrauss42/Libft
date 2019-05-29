@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 12:46:28 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/29 12:46:30 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/05/29 16:04:07 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char *	ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	int i;
+	size_t i;
 	char *ret;
 	i = 0;
 	ret =(char *) malloc (len * sizeof(char));
