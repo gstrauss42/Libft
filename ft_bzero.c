@@ -1,27 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strcmp.c                                           :+:      :+:    :+:   */
+/*   bzero.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/27 10:05:50 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/29 12:51:28 by gstrauss         ###   ########.fr       */
+/*   Created: 2019/05/27 09:58:23 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/05/29 15:59:33 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_strcmp(const char *s1, const char *s2)
+#include "libft.h"
+
+void	*ft_bzero(char *s, size_t n)
 {
-	int i;
+	size_t i;
+
 	i = 0;
-	while((s1[i] || s2[i]) != '\0')
+	while (i < n)
 	{
-		if(s1[i] != s2[i])
-		{
-			i = s1[i] - s2[i];
-			return(i);
-		}
+		s[i] = '0';
 		i++;
 	}
-	return(0);
+	return (s);
 }
