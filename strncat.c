@@ -6,14 +6,13 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:07:43 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/27 10:07:46 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/05/29 13:00:27 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
-char *ft_strcat(char *s1, const char *s2, size_t n)
+char *ft_strncat(char *s1, const char *s2, size_t n)
 {
 	int i, a, b;
 	char *ret;

@@ -6,11 +6,11 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:09:57 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/28 09:28:42 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/05/29 12:54:52 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char *ft_strstr(char *a, char *b)
 {

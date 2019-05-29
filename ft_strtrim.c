@@ -1,4 +1,16 @@
-#include <stlib.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/05/29 12:46:48 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/05/29 12:58:21 by gstrauss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
 
 char *	ft_strtrim(char const *s)
 {
@@ -12,9 +24,9 @@ char *	ft_strtrim(char const *s)
 	while(s[end] != '\0')
 		end++;
 	ret =(char *) malloc (end * sizeof(char));
-	while(s[i] == (' ' || '\n' || '\t'))
+	while(s[i] == ((' ' || '\n') || '\t'))
 		i++;
-	while(s[end] == (' ' || '\n' || '\t'))
+	while(s[end] == ((' ' || '\n') || '\t'))
 		end--;
 	while(i <= end)
 	{

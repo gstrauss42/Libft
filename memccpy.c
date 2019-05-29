@@ -6,11 +6,11 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:01:13 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/27 10:01:18 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/05/29 12:48:16 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 unsigned char *ft_memccpy(void *dst, const void *src, int c,size_t n)
 {
