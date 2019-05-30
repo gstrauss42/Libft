@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:08:36 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/29 12:53:40 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/05/30 08:28:47 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char *ft_strncpy(char *dst, const char * src, size_t len)
 {
-	int i;
+	size_t i;
 	int p;
 
 	p = 0;

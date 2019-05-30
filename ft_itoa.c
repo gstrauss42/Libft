@@ -6,13 +6,14 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 08:46:57 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/29 12:34:36 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/05/30 08:16:57 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char *	ft_itoa(int n)
 {
 	char * ret;
+	ret = 0;
 	int i;
 	int z;
 	int c;
