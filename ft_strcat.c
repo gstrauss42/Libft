@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:05:05 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/30 08:22:51 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/05/30 12:30:09 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,17 @@
 
 char *ft_strcat(char *s1, const char *s2)
 {
-	int i, a, b;
-	char *ret;
-	i = 0;
+	int i, a;
 	a = 0;
-	b = 0;
-	while(s1[i] != '\0')
-		i++;
-	while(s2[b] != '\0')
-		b++;
-	ret = (char *)malloc((i + b + 1) * sizeof(char));
 	i = 0;
 	while(s1[i] != '\0')
-	{
-		ret[i] = s1[i];
 		i++;
-	}
 	while(s2[a] != '\0')
 	{
-		ret[i] = s2[a];
+		s1[i] = s2[a];
 		i++;
 		a++;
 	}
-	ret[i] = '\0';
-	return(ret);
+	s1[i] = '\0';
+	return(s1);
 }

@@ -6,15 +6,13 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:00:23 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/29 12:47:25 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/05/30 12:16:32 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int ft_isdigit(int c)
 {
-	char a;
-	a = (char) c;
-	if((a< 10 && a >= 0) || (a < 58 && a > 47) )
+	if(c < 58 && c > 47)
 		return(1);
 	else
 		return(0);	

@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:07:06 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/30 08:26:34 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/05/30 12:40:30 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	int i;
+	size_t i;
 	size_t o;
 	i = 0;
 	o = 0;
