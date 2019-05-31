@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:10:36 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/29 12:35:52 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/05/31 08:38:58 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -14,5 +14,6 @@
 void	ft_memdel (void **ap)
 {
 	free(ap);
+	return;
 }
 

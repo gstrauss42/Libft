@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 12:46:48 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/29 13:06:20 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/05/31 09:39:33 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,15 @@ char *	ft_strtrim(char const *s)
 	int o;
 	int end;
 	char *ret;
+	char *ss;
+	ss = (char *)s;
 	i = 0;
 	o = 0;
-	end = 0;
-	while(s[end] != '\0')
-		end++;
-	ret =(char *) malloc (end * sizeof(char));
+	end = ft_strlen(ss);
+	ret =(char *) malloc ((end) * sizeof(char));
 	while(s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 		i++;
+	end--;
 	while(s[end] == ' ' || s[end] == '\n' || s[end] == '\t')
 		end--;
 	while(i <= end)
@@ -34,6 +35,6 @@ char *	ft_strtrim(char const *s)
 		i++;
 		o++;
 	}
-//check if nesacerry	ret[i] = '\0';
+	ret[o] = '\0';
 	return(ret);
 }
