@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:04:23 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/06/04 15:49:45 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/06/04 16:24:50 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,21 @@ void *ft_memmove(void *dst, const void *src, size_t len)
 	i = 0;
 	if(dest == '\0' && source == '\0')
 		return(dest);
-	while(i < len)
+	if(src > dst)
 	{
-		dest[i] = source[i];
-		i++;;
+		while(i < len)
+		{
+			dest[i] = source[i];
+			i++;
+		}
+	}
+	if(dst > src)
+	{
+		while(len > 0)
+		{
+			dest[len - 1] = source[len - 1];
+			len--;
+		}
 	}
 	return(dest);
 }
