@@ -6,15 +6,15 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:10:49 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/29 09:50:09 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/06/05 10:19:28 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+int		ft_toupper(int c)
 {
-	if(c > 96 && c < 123)
+	if (c > 96 && c < 123)
 		c = c - 32;
 	else
-		return(c);
-	return(c);
+		return (c);
+	return (c);
 }

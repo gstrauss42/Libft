@@ -6,15 +6,16 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 12:42:34 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/29 14:46:18 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/06/05 10:24:14 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striter(char *s, void (*f)(char *))
 {
 	int i;
+
 	i = 0;
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		f(&s[i]);
 		i++;

@@ -6,18 +6,19 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:05:45 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/31 11:17:17 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/06/05 10:21:35 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *	ft_memalloc(size_t size)
+void	*ft_memalloc(size_t size)
 {
 	void *a;
-	a = (void *) malloc(size);
-	if(a ==	NULL)
-		return(NULL);
+
+	a = (void *)malloc(size);
+	if (a == NULL)
+		return (NULL);
 	ft_memset(a, 0, size);
-	return(a);
+	return (a);
 }

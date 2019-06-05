@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 09:17:30 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/06/03 12:49:49 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/06/05 11:07:01 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	ft_putendl_fd(char const *s, int fd)
 {
 	char *ss;
 	char a;
+
 	a = '\n';
-	ss = (char *) s;
+	ss = (char *)s;
 	ft_putstr_fd(ss, fd);
 	ft_putchar_fd(a, fd);
-	return;
 }

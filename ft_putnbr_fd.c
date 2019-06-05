@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 09:19:18 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/06/03 13:00:42 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/06/05 11:25:01 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char * a;
-	int i;
+	char	*a;
+	int		i;
+
 	i = 0;
 	a = ft_itoa(n);
-	while(a[i] != '\0')
+	while (a[i] != '\0')
 	{
 		write(fd, &a, 1);
 		i++;
 	}
-	return;
 }

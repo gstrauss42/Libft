@@ -6,18 +6,18 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 12:42:47 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/29 14:46:37 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/06/05 09:33:56 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	int i;
+
 	i = 0;
-	while(s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		f(i, &s[i]);
 		i++;
 	}
-	return;
 }

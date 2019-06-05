@@ -6,14 +6,14 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:00:23 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/05/30 12:16:32 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/06/05 09:27:39 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isdigit(int c)
+int		ft_isdigit(int c)
 {
-	if(c < 58 && c > 47)
-		return(1);
+	if (c < 58 && c > 47)
+		return (1);
 	else
-		return(0);	
+		return (0);
 }
