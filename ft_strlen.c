@@ -6,16 +6,18 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 10:07:18 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/06/04 15:16:51 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/06/05 09:08:18 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(char *a)
+int		ft_strlen(const char *a)
 {
 	int i;
+	char * b;
+	b = (char *) a;
 
 	i = 0;
-	while (a[i] != '\0')
+	while (b[i] != '\0')
 		i++;
 	return (i);
 }
