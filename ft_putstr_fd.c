@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 09:10:46 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/06/05 09:28:44 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/06/06 14:05:40 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(char const *s, int fd)
 	char	*ss;
 	int		i;
 
+	if(!s)
+		return ;
 	ss = (char *)s;
 	i = 0;
 	while (ss[i] != '\0')
