@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 08:46:57 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/06/05 13:10:49 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/06/06 14:34:20 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,3 +61,53 @@ char		*ft_itoa(int n)
 	}
 	return (ret);
 }
+
+char		*ft_itoa(int n)
+{
+	int sign;
+	int i;
+	char *ret;
+
+	i = 0;
+	sign = 1;
+	ret=(char *)malloc(length(n) *sizeof(char *));
+	if(n < 0)
+		sign = -1;
+	if (n > 9)
+		ft_itoa(n / 10);
+	ret[i] = n % 10;
+	i++;
+	return(ret);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

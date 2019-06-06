@@ -6,25 +6,25 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 12:40:35 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/06/06 12:35:18 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/06/06 14:24:30 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr(int n)
+void	ft_putnbr(int n)
 {
-	if(n == -2147483648)
+	if (n == -2147483648)
 	{
 		ft_putstr("-2147483648");
 		return ;
 	}
-	if(n < 0)
+	if (n < 0)
 	{
 		n *= -1;
 		ft_putchar('-');
 	}
-	if(n > 9)
+	if (n > 9)
 		ft_putnbr(n / 10);
 	ft_putchar(n % 10 + 48);
 }

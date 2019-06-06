@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 12:36:02 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/06/06 14:03:55 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/06/06 14:23:32 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 void	ft_putstr(char const *s)
 {
-	if(!s)
-		return ;
 	int i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while (s[i] != '\0')
 	{
 		write(1, &s[i], 1);
