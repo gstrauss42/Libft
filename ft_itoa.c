@@ -6,11 +6,12 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/28 08:46:57 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/06/06 14:34:20 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/06/06 15:42:14 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static char	*test1(char *ret)
 {
@@ -36,78 +37,37 @@ static int	length(int n)
 
 char		*ft_itoa(int n)
 {
-	char	*ret;
-	int		i[4];
-
-	i[0] = 0;
-	i[1] = 0;
-	i[2] = length(n);
-	i[3] = 1;
-	while (n / (i[3] * 10) != 0)
-		i[3] = i[3] * 10;
-	if (!(ret = (char *)malloc((length(n) + 1) * sizeof(char))))
-		return (NULL);
-	if (n == 0)
-		return (test1(ret));
-	while (i[2] + 1 > 0)
-	{
-		i[1] = n / i[3];
-		ret[i[0]] = i[1] + 48;
-		i[1] = i[1] * i[3];
-		i[3] = i[3] / 10;
-		n = n - i[1];
-		i[2]--;
-		i[0]++;
-	}
-	return (ret);
-}
-
-char		*ft_itoa(int n)
-{
-	int sign;
-	int i;
 	char *ret;
+	int i;
+	int p;
+	int sign;
+	int temp;
 
-	i = 0;
+	temp = length(n);
 	sign = 1;
-	ret=(char *)malloc(length(n) *sizeof(char *));
+	p = length(n) - 1;
+	i = 10;
+	ret = (char *)malloc(length(n)+ 1 *sizeof(char));
+	if(n == 0)
+		return(test1(ret));
 	if(n < 0)
-		sign = -1;
-	if (n > 9)
-		ft_itoa(n / 10);
-	ret[i] = n % 10;
-	i++;
+	{
+		n = n * - 1;
+		ret[0] = '-';
+		p++;
+	}
+	while( n > 0 )
+	{
+		ret[p] = n % i + 48;
+		n = (n - (n % i)) / 10;
+		p--;
+	}
+	ret[temp] = '\0';
 	return(ret);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+int main()
+{
+	printf("%s", ft_itoa(21474));
+	return(0);
+}
