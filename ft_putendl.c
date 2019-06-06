@@ -6,13 +6,13 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 12:39:49 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/06/05 11:06:05 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/06/06 08:45:28 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putdendl(char const *s)
+void	ft_putendl(char const *s)
 {
 	int		i;
 	char	a;
