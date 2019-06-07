@@ -1,73 +1,91 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_itoa_temp.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/28 08:46:57 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/06/06 15:42:14 by gstrauss         ###   ########.fr       */
+/*   Created: 2019/06/07 08:23:19 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/06/07 10:37:42 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-static char	*test1(char *ret)
+static int		size(int n)
 {
-	ret[0] = 48;
-	ret[1] = '\0';
-	return (ret);
-}
-
-static int	length(int n)
-{
-	int i;
-	int q;
+	long	i;
+	int		q;
 
 	q = 0;
 	i = 1;
+	if (n == 2147483647)
+		n--;
 	while (n / i != 0)
 	{
-		q++;
 		i = i * 10;
+		q++;
 	}
 	return (q);
 }
 
-char		*ft_itoa(int n)
+static char		*neg(int n)
 {
-	char *ret;
-	int i;
-	int p;
-	int sign;
-	int temp;
+	int		i; 
+	char	*ret;
+	int		c;
 
-	temp = length(n);
-	sign = 1;
-	p = length(n) - 1;
-	i = 10;
-	ret = (char *)malloc(length(n)+ 1 *sizeof(char));
-	if(n == 0)
-		return(test1(ret));
-	if(n < 0)
-	{
-		n = n * - 1;
-		ret[0] = '-';
-		p++;
+	c = 100000000;
+	i = 0;
+	ret = (char *)malloc(12 *sizeof(char *));
+	ret[i] = '-';
+	i++;
+	n = ((n + 8) / 10) * - 1;
+	while (n > 0)
+	{ 
+		ret[i] = n / c + 48;
+		i++;
+		n = n - ((n / c) * c);
+		c = c / 10;
 	}
-	while( n > 0 )
-	{
-		ret[p] = n % i + 48;
-		n = (n - (n % i)) / 10;
-		p--;
-	}
-	ret[temp] = '\0';
-	return(ret);
+	ret[i] = '8';
+	ret[i + 1] = '\0';
+	return (ret);
 }
 
-int main()
+char			*ft_itoa(int n)
 {
-	printf("%s", ft_itoa(21474));
-	return(0);
+	int		c;
+	char	*ret;
+	int		q;
+	int		tmp;
+
+	tmp = size(n);
+	q = size(n);
+	c = 1;
+	if (n == -2147483648)
+		return (neg(n));
+	ret = (char *)malloc(size(n)+ 1 * sizeof(char *));
+	if (n < 0 && n > -2147483648)
+	{
+		ret[0] = '-';
+		n = n * -1;
+		q++;
+		tmp++;
+	}
+	q--;
+	if (n == 0)
+	{
+		ret[0] = '0';
+		ret[1] = '\0';
+		return (ret);
+	}
+	while (n != 0)
+	{
+		ret[q] = n % 10 + '0';
+		n = n / 10;
+		q--;
+	}
+	ret[tmp] = '\0';
+	return (ret);
 }
