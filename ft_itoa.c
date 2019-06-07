@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 08:23:19 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/06/07 10:37:42 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/06/07 12:17:51 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,18 +31,18 @@ static int		size(int n)
 
 static char		*neg(int n)
 {
-	int		i; 
+	int		i;
 	char	*ret;
 	int		c;
 
 	c = 100000000;
 	i = 0;
-	ret = (char *)malloc(12 *sizeof(char *));
+	ret = (char *)malloc(12 * sizeof(char *));
 	ret[i] = '-';
 	i++;
-	n = ((n + 8) / 10) * - 1;
+	n = ((n + 8) / 10) * -1;
 	while (n > 0)
-	{ 
+	{
 		ret[i] = n / c + 48;
 		i++;
 		n = n - ((n / c) * c);
@@ -53,39 +53,37 @@ static char		*neg(int n)
 	return (ret);
 }
 
+static char		*test(char *ret)
+{
+	ret[0] = '0';
+	ret[1] = '\0';
+	return (ret);
+}
+
 char			*ft_itoa(int n)
 {
 	int		c;
 	char	*ret;
 	int		q;
-	int		tmp;
 
-	tmp = size(n);
 	q = size(n);
 	c = 1;
 	if (n == -2147483648)
 		return (neg(n));
-	ret = (char *)malloc(size(n)+ 1 * sizeof(char *));
+	ret = (char *)malloc(size(n) + 1 * sizeof(char *));
 	if (n < 0 && n > -2147483648)
 	{
 		ret[0] = '-';
 		n = n * -1;
 		q++;
-		tmp++;
 	}
-	q--;
+	ret[q] = '\0';
 	if (n == 0)
-	{
-		ret[0] = '0';
-		ret[1] = '\0';
-		return (ret);
-	}
-	while (n != 0)
+		return (test(ret));
+	while (n != 0 && q-- >= 0)
 	{
 		ret[q] = n % 10 + '0';
 		n = n / 10;
-		q--;
 	}
-	ret[tmp] = '\0';
 	return (ret);
 }

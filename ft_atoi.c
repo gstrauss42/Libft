@@ -6,11 +6,12 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 09:59:03 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/06/05 13:15:19 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/06/07 12:03:51 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int		ft_atoi(char *str)
 {
@@ -29,6 +30,8 @@ int		ft_atoi(char *str)
 		sign = -1;
 		i++;
 	}
+	else if (str[i] == '+')
+		i++;
 	while (str[i] != '\0')
 	{
 		if (str[i] > '9' || str[i] < '0')
