@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/29 12:46:00 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/06/07 13:24:12 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/06/10 09:41:50 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static char		*substring(char const *a, char c, int i)
 
 	b = i;
 	p = 0;
-	while (a[i] != c)
+	while (a[i] != c && a[i] != '\0')
 		i++;
 	ret = (char *)malloc(i - b + 1 * sizeof(char));
 	while (b < i && a[b] != '\0')
