@@ -6,7 +6,7 @@
 #    By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/29 15:49:05 by gstrauss          #+#    #+#              #
-#    Updated: 2019/06/10 10:28:54 by gstrauss         ###   ########.fr        #
+#    Updated: 2019/06/11 13:41:07 by gstrauss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,8 @@ SRCS = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	   ft_strjoin.c ft_strlcat.c ft_strlen.c ft_strmap.c ft_strmapi.c \
 	   ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strnequ.c ft_strnew.c \
 	   ft_strnstr.c ft_strrchr.c ft_strsplit.c ft_strstr.c ft_strsub.c \
-	   ft_strtrim.c ft_tolower.c ft_toupper.c \
+	   ft_strtrim.c ft_tolower.c ft_toupper.c ft_lstadd.c ft_lstdel.c \
+	   ft_lstdelone.c ft_lstiter.c ft_lstmap.c ft_lstnew.c \
 
 OBJS = ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o \
 	   ft_isdigit.o ft_isprint.o ft_itoa.o ft_memalloc.o ft_memccpy.o \
@@ -36,7 +37,8 @@ OBJS = ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o \
 	   ft_strjoin.o ft_strlcat.o ft_strlen.o ft_strmap.o ft_strmapi.o \
 	   ft_strncat.o ft_strncmp.o ft_strncpy.o ft_strnequ.o ft_strnew.o \
 	   ft_strnstr.o ft_strrchr.o ft_strsplit.o ft_strstr.o ft_strsub.o \
-	   ft_strtrim.o ft_tolower.o ft_toupper.o \
+	   ft_strtrim.o ft_tolower.o ft_toupper.o ft_lstadd.o ft_lstdel.o \
+	   ft_lstdelone.o ft_lstiter.o ft_lstmap.o ft_lstnew.o \
 
 all: $(NAME)
 
