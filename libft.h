@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 10:39:13 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/06/11 13:47:30 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/06/11 14:37:35 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void			ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void			ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
 t_list			*ft_lstnew(void const *content, size_t content_size);
 int				ft_atoi(char *str);
-void			*ft_bzero(char *s, size_t n);
+void			ft_bzero(void *s, size_t n);
 char			*ft_itoa(int n);
 char			*ft_strncat(char *s1, const char *s2, size_t n);
 int				ft_isalnum(int c);
@@ -46,14 +46,14 @@ void			*ft_memchr(const void *s, int c, size_t n);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t len);
-void			*ft_memset(char *b, int c, size_t len);
+void			*ft_memset(void *b, int c, size_t len);
 char			*ft_strcat(char *s1, const char *s2);
 char			*ft_strchr(char *s, int c);
 int				ft_strcmp(const char *s1, const char *s2);
 char			*ft_strcpy(char *dst, const char *src);
 char			*ft_strdup(const char *str);
 size_t			ft_strlcat(char *dst, char *src, size_t dstsize);
-int				ft_strlen(char const *a);
+size_t			ft_strlen(char const *a);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strncpy(char *dst, const char *src, size_t len);
 char			*ft_strnstr(char *haystack, char *needle, size_t len);
