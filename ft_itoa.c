@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 08:23:19 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/06/07 12:17:51 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/06/12 13:19:06 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ static char		*neg(int n)
 	c = 100000000;
 	i = 0;
 	ret = (char *)malloc(12 * sizeof(char *));
+	if (ret == NULL)
+		return (NULL);
 	ret[i] = '-';
 	i++;
 	n = ((n + 8) / 10) * -1;
@@ -62,15 +64,15 @@ static char		*test(char *ret)
 
 char			*ft_itoa(int n)
 {
-	int		c;
 	char	*ret;
 	int		q;
 
 	q = size(n);
-	c = 1;
 	if (n == -2147483648)
 		return (neg(n));
 	ret = (char *)malloc(size(n) + 1 * sizeof(char *));
+	if (!ret)
+		return (NULL);
 	if (n < 0 && n > -2147483648)
 	{
 		ret[0] = '-';
