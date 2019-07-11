@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstend.c                                        :+:      :+:    :+:   */
+/*   swap_a.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/17 09:17:32 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/10 16:13:46 by gstrauss         ###   ########.fr       */
+/*   Created: 2019/07/10 14:52:26 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/07/11 09:31:09 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstend(t_list *head, t_list *new)
+void	sa(int **stack)
 {
-	t_list *counta;
-	t_list *count;
+	int tmp;
 
-	if (head)
+	if (ft_isdigit(stack[1][0]))
 	{
-		count = head;
-		while (count->next)
-		{
-			counta = count->next;
-			count = counta;
-		}
-		count->next = new;
-		new->next = NULL;
+		tmp = stack[0][0];
+		stack[0][0] = stack[1][0];
+		stack[1][0] = tmp;
 	}
 }

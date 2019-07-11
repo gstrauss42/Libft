@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstend.c                                        :+:      :+:    :+:   */
+/*   ft_matoi.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/17 09:17:32 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/10 16:13:46 by gstrauss         ###   ########.fr       */
+/*   Created: 2019/07/10 15:09:45 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/07/11 09:29:27 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstend(t_list *head, t_list *new)
+int		**ft_matoi(char **input)
 {
-	t_list *counta;
-	t_list *count;
+	int i;
+	int **used;
 
-	if (head)
+	i = 0;
+	used = (int **)malloc(sizeof(input));
+	while (input[i])
 	{
-		count = head;
-		while (count->next)
-		{
-			counta = count->next;
-			count = counta;
-		}
-		count->next = new;
-		new->next = NULL;
+		used[i][0] = ft_atoi(input[i]);
+		i++;
 	}
+	return (used);
 }
