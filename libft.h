@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 10:39:13 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/12 14:20:15 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/07/12 12:21:29 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,6 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
-void			ft_del(void *s, size_t n);
-int				ft_strnlen(char *str, char c);
-char			*ft_strnjoin(char const *s1, char const *s2, char c);
-char			*ft_stranjoin(char *s1, char *s2, char c);
-char			*ft_strcut(char *s, char c);
 t_list			*ft_lstezmake(t_list **head, char *input);
 void			ft_lstend(t_list *head, t_list *new);
 t_list			*ft_lstmake(char **input, char c);
