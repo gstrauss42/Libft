@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlen.c                                        :+:      :+:    :+:   */
+/*   ft_rra.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/16 07:12:06 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/17 15:28:12 by gstrauss         ###   ########.fr       */
+/*   Created: 2019/07/17 15:19:46 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/07/17 15:32:11 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
-int		ft_lstlen(t_list *head)
+void	rra(t_list **lista)
 {
-	int count;
-
-	count = 0;
-	while(head && head->next)
-	{
-		count++;
-		head = head->next;
-	}
-	return(count);
+	t_list *tmp;
+	tmp = ft_pop(lista, ft_lstlen(*lista));
+	ft_lstend(*lista, tmp);
 }

@@ -6,11 +6,14 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 10:07:26 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/17 09:41:00 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/07/17 14:55:17 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	pa(t_list *lista, t_list *listb)
+#include "libft.h"
+
+void	pa(t_list **lista, t_list **listb)
 {
-	
+	if((*lista)->content)	
+		ft_lstadd(listb, ft_pop(lista, 0));
 }	
