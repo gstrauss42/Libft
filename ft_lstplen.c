@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstend.c                                        :+:      :+:    :+:   */
+/*   ft_lstlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/17 09:17:32 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/16 08:08:46 by gstrauss         ###   ########.fr       */
+/*   Created: 2019/07/15 12:58:59 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/07/16 07:04:40 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstend(t_list *head, t_list *new)
+int		ft_lstplen(t_list *head, t_list *node)
 {
-	t_list *count;
+	int i;
 
-	if (head)
+	i = 0;
+	while(node != head)
 	{
-		count = head;
-		while (count)
-		{
-			if (count->next)
-				count = count->next;
-			if (!count->next)
-				break;
-		}
-		if (!new)
-			return;
-		count->next = new;
-		new->next = NULL;
+		node = node->next;
+		i++;
 	}
+	return(i);
 }

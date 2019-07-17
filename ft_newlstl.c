@@ -6,15 +6,24 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 10:11:19 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/11 10:50:57 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/07/17 09:41:36 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_newlstsl(int len, int size)
+t_list	*ft_newlstl(int len)
 {
+	int i;
 	t_list *head;
-	
-	while(
-	head->content = (char *)malloc(size);
+	t_list *cpy;
+
+	i = 0;
+	while(i < len)
+	{
+		cpy = ft_lstezmake(&head, "blank");
+		head = cpy;
+		i++;
+	}
+	return(head);
+}

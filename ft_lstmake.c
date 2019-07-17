@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 15:26:18 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/11 09:28:00 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/07/16 07:23:57 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,7 @@ t_list		*ft_lstmake(char **input, char c)
 	count = 0;
 	while (split[i] != NULL)
 	{
-		if (i == 0)
-			head = ft_lstnew(split[i], ft_strlen(split[i]) + 1);
-		else
-			ft_lstend(head, ft_lstnew(split[i], ft_strlen(split[i]) + 1));
+		ft_lstezmake(&head, split[i]);
 		i++;
 	}
 	return (head);

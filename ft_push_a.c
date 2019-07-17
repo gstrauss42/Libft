@@ -6,10 +6,11 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 10:07:26 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/11 10:10:31 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/07/17 09:41:00 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	pa(t_list *lista, t_list *listb)
 {
-	lista->content
+	
+}	
