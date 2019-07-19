@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 10:39:13 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/17 15:26:37 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/07/19 09:34:26 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+void			sb(t_list *head);
+void			pa(t_list **lista, t_list **listb);
+void			rb(t_list **listb);
+void			rrb(t_list **listb);
 void			rra(t_list **lista);
 void			ra(t_list **lista);
 void			pa(t_list **lista, t_list **listb);

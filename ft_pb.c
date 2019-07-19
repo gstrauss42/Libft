@@ -1,24 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rra.c                                           :+:      :+:    :+:   */
+/*   ft_pb.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/17 15:19:46 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/19 09:16:47 by gstrauss         ###   ########.fr       */
+/*   Created: 2019/07/19 09:26:25 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/07/19 09:27:52 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-void	rra(t_list **lista)
+void	pa(t_list **lista, t_list **listb)
 {
-	t_list *tmp;
-	tmp = ft_pop(lista, ft_lstlen(*lista));
-	if(lista)
-		ft_lstadd(lista, tmp);
-	else
-		lista = &tmp;
+	if((*listb)->content)
+		ft_lstadd(lista, ft_pop(listb, 0));
 }
