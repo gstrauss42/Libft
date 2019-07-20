@@ -1,35 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcutn.c                                       :+:      :+:    :+:   */
+/*   ft_strandup.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/25 11:13:51 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/15 10:55:38 by gstrauss         ###   ########.fr       */
+/*   Created: 2019/07/15 14:27:36 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/07/15 15:59:54 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcut(char *s, char c)
+char	*ft_strandup(char *str, char c)
 {
 	int		i;
 	int		p;
+	int		z;
+	char	*ret;
 
-	p = 0;
+	z = 0;
+	p = ft_strnlen(str, c);
+	ret = (char *)malloc(ft_strlen(str) - p + 1);
 	i = 0;
-	if (!s[i] || !s)
-		return (NULL);
-	while (s[i] != c && s[i])
+	while (i < p)
 		i++;
-	i++;
-	while (s[i])
-	{
-		s[p] = s[i];
+	if (str[i] == c)
 		i++;
-		p++;
-	}
-	s[p] = '\0';
-	return (s);
+	while (str[i])
+		ret[z++] = str[i++];
+	ret[z] = '\0';
+	return (ret);
 }

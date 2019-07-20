@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcutn.c                                       :+:      :+:    :+:   */
+/*   ft_strndup.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/06/25 11:13:51 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/15 10:55:38 by gstrauss         ###   ########.fr       */
+/*   Created: 2019/07/15 13:46:41 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/07/15 16:00:44 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcut(char *s, char c)
+char	*ft_strndup(char *str, char c)
 {
 	int		i;
-	int		p;
+	char	*ret;
 
-	p = 0;
 	i = 0;
-	if (!s[i] || !s)
-		return (NULL);
-	while (s[i] != c && s[i])
-		i++;
-	i++;
-	while (s[i])
+	ret = (char *)malloc(ft_strnlen(str, c) + 1);
+	while (str[i] && str[i] != c)
 	{
-		s[p] = s[i];
+		ret[i] = str[i];
 		i++;
-		p++;
 	}
-	s[p] = '\0';
-	return (s);
+	ret[i] = '\0';
+	return (ret);
 }
