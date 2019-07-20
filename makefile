@@ -6,13 +6,15 @@
 #    By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/29 15:49:05 by gstrauss          #+#    #+#              #
-#    Updated: 2019/07/19 09:32:08 by gstrauss         ###   ########.fr        #
+#    Updated: 2019/07/20 06:58:38 by gstrauss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FLAGS = -Wall -Werror -Wextra -c
 
-NAME = libft.a
+DOT_A = libft.a
+
+PATHS = pushswap_functions/*.o
 
 SRCS = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	   ft_isdigit.c ft_isprint.c ft_itoa.c ft_memalloc.c ft_memccpy.c \
@@ -25,10 +27,9 @@ SRCS = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	   ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strnequ.c ft_strnew.c \
 	   ft_strnstr.c ft_strrchr.c ft_strsplit.c ft_strstr.c ft_strsub.c \
 	   ft_strtrim.c ft_tolower.c ft_toupper.c ft_lstadd.c ft_lstdel.c \
-	   ft_lstdelone.c ft_lstiter.c ft_lstmap.c ft_lstnew.c ft_sa.c \
+	   ft_lstdelone.c ft_lstiter.c ft_lstmap.c ft_lstnew.c \
 	   ft_matoi.c ft_lstmake.c ft_lstend.c ft_lstezmake.c ft_pop.c \
-	   ft_lstplen.c ft_del.c ft_lstlen.c ft_newlstl.c ft_pa.c \
-	   ft_ra.c ft_rra.c ft_rrb.c ft_rb.c ft_pb.c ft_sb.c \
+	   ft_lstplen.c ft_del.c ft_lstlen.c ft_newlstl.c \
 
 OBJS = ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o \
 	   ft_isdigit.o ft_isprint.o ft_itoa.o ft_memalloc.o ft_memccpy.o \
@@ -41,19 +42,25 @@ OBJS = ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o \
 	   ft_strncat.o ft_strncmp.o ft_strncpy.o ft_strnequ.o ft_strnew.o \
 	   ft_strnstr.o ft_strrchr.o ft_strsplit.o ft_strstr.o ft_strsub.o \
 	   ft_strtrim.o ft_tolower.o ft_toupper.o ft_lstadd.o ft_lstdel.o \
-	   ft_lstdelone.o ft_lstiter.o ft_lstmap.o ft_lstnew.o ft_sa.o \
+	   ft_lstdelone.o ft_lstiter.o ft_lstmap.o ft_lstnew.o \
 	   ft_matoi.o ft_lstmake.o ft_lstend.o ft_lstezmake.o ft_pop.o \
-	   ft_lstplen.o ft_del.o ft_lstlen.o ft_newlstl.o ft_pa.o \
-	   ft_ra.o ft_rra.o ft_rrb.o ft_rb.o ft_pb.o ft_sb.o \
+	   ft_lstplen.o ft_del.o ft_lstlen.o ft_newlstl.o \
 
-all: $(NAME)
-
-$(NAME):
+all: pushswap
 	gcc $(FLAGS) $(SRCS)
-	ar rc $(NAME) $(OBJS) 
+	$(PUSHSWAP)
+	ar rc $(DOT_A) $(OBJS) $(PATHS)
+	rm -f $(OBJS)
 
 COMPILE:
 	gcc $(FLAGS) $(SRCS)
+
+tmp:
+	$(PUSHSWAP)
+
+pushswap:
+	make fclean -C pushswap_functions
+	make -C pushswap_functions
 
 clean:
 	rm -f $(OBJS)
