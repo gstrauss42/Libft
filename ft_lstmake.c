@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 15:26:18 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/22 09:38:59 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/07/22 12:17:57 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ t_list		*ft_lstmake(char **input, char c, int num)
 
 	split = ft_splitter(input, c, num);
 	i = 0;
+	head = NULL;
 	while (split[i] != NULL)
 	{
 		ft_lstezmake(&head, split[i]);
