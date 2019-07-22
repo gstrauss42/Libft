@@ -6,13 +6,13 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 09:30:49 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/19 09:31:26 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/07/22 14:09:25 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
-void	sa(t_list *head)
+void	sb(t_list *head)
 {
 	t_list	*node;
 	char	*tmp;

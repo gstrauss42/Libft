@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 10:39:13 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/22 09:38:03 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/07/22 14:03:44 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char			*ft_strndup(char *str, char c);
 
 int				get_next_line(const int fd, char **line);
 void			sb(t_list *head);
-void			pa(t_list **lista, t_list **listb);
+void			pb(t_list **lista, t_list **listb);
 void			rb(t_list **listb);
 void			rrb(t_list **listb);
 void			rra(t_list **lista);

@@ -6,11 +6,11 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 09:24:06 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/19 09:25:16 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/07/22 14:04:54 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	rb(t_list **listb)
 {

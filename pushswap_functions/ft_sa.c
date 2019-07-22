@@ -6,11 +6,11 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:52:26 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/15 12:42:09 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/07/22 14:05:32 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	sa(t_list *head)
 {

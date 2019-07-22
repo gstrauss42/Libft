@@ -6,12 +6,11 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 15:19:46 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/19 09:16:47 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/07/22 14:05:09 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-#include <stdio.h>
+#include "../libft.h"
 
 void	rra(t_list **lista)
 {
