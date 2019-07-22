@@ -6,13 +6,13 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 14:58:03 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/22 14:04:43 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/07/22 16:29:51 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ra(t_list **lista)
+void	ft_ra(t_list **lista)
 {
 	t_list *tmp;
 	tmp = ft_pop(lista, 0);
