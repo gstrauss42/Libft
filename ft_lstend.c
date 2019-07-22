@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/17 09:17:32 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/16 08:08:46 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/07/22 09:53:50 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstend(t_list *head, t_list *new)
 {
 	t_list *count;
 
+	if (!new)
+		return;
 	if (head)
 	{
 		count = head;
@@ -26,8 +28,6 @@ void	ft_lstend(t_list *head, t_list *new)
 			if (!count->next)
 				break;
 		}
-		if (!new)
-			return;
 		count->next = new;
 		new->next = NULL;
 	}

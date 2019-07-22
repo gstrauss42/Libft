@@ -6,30 +6,28 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 15:26:18 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/16 07:23:57 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/07/22 09:38:59 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char	**ft_splitter(char **input, char c)
+static char	**ft_splitter(char **input, char c, int num)
 {
 	char **tmp;
 
-	tmp = ft_strsplit(input[1], c);
+	tmp = ft_strsplit(input[num], c);
 	return (tmp);
 }
 
-t_list		*ft_lstmake(char **input, char c)
+t_list		*ft_lstmake(char **input, char c, int num)
 {
-	int		count;
 	int		i;
 	char	**split;
 	t_list	*head;
 
-	split = ft_splitter(input, c);
+	split = ft_splitter(input, c, num);
 	i = 0;
-	count = 0;
 	while (split[i] != NULL)
 	{
 		ft_lstezmake(&head, split[i]);
