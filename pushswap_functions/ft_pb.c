@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 09:26:25 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/22 14:04:12 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/07/23 11:30:26 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	pb(t_list **lista, t_list **listb)
 {
-	if((*lista)->content)
+	if((*lista) != NULL)
 		ft_lstadd(listb, ft_pop(lista, 0));
 }
