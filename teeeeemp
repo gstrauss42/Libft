@@ -19,3 +19,16 @@ Push_swap Because Swap_push isn’t as natural
 rrb : reverse rotate b - shift down all elements of stack b by 1. The last element
 becomes the first one.
 rrr : rra and rrb at the same time
+
+
+input
+static random index used to derive steps in intuitive step picker
+
+{net sum using positional value and final value to indicate choice of function based on cumuluative effect of function, equations}
+
+call sort x times and save steps
+compare speeds
+take fastest and run a sort from each of the sort points
+take fastest and repeat until standard deviation of reduced speed is minimal over a period
+delete files
+return intstructions
