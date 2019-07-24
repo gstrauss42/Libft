@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 10:39:13 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/23 11:10:09 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/07/24 09:34:23 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,15 @@
 # include <string.h>
 # include <stdlib.h>
 # define BUFF_SIZE 4
+
+typedef struct a_list
+{
+	int				current_position;
+	int				final_position;
+	int				differance;
+	void			*content;
+	struct a_list	*next;
+}				p_list;
 
 typedef struct	s_list
 {
