@@ -6,13 +6,13 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 09:24:06 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/22 14:04:54 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/07/26 11:03:28 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	rb(t_list **listb)
+void	ft_rb(t_list **listb)
 {
 	t_list *tmp;
 	tmp = ft_pop(listb, 0);

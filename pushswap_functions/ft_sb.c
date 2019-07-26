@@ -6,13 +6,13 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 09:30:49 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/24 08:36:10 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/07/26 11:03:57 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	sb(t_list *head)
+void	ft_sb(t_list *head)
 {
 	if(head && head->next)
 	{
