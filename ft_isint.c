@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/26 12:56:22 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/29 13:33:39 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/07/30 09:17:42 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,13 @@ int		ft_isint(char *str)
 	char tmp[11] = "2147483647";
 	if(str[i] == '-')
 	{
-		if(ft_strlen(str) >= 11)
+		if(ft_strlen(str) == 11)
 		{
 			if(check(tmp, str) == 0)
 				return(0);
 		}
+		if(ft_strlen(str) > 11)
+			return(0);
 		i++;
 	}
 	if(ft_strlen(str) > 10 && str[0] != '-')
