@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 14:58:03 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/29 13:41:43 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/08/06 09:31:57 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,19 @@ void	ft_ra(t_list **lista)
 {
 	if(*lista)
 	{
+		int i;
 		t_list *tmp;
+		i = (*lista)->fpos;
 		tmp = ft_pop(lista, 0);
 		ft_lstend(*lista, tmp);
+		tmp = *lista;
+		while(true)
+		{
+			if(tmp->next)
+				tmp = tmp->next;
+			else
+				break;
+		}
+		tmp->fpos = i;
 	}
 }
