@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 10:39:13 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/06 09:49:45 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/08/16 09:39:53 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,7 @@ typedef struct	s_list
 	int 			fpos;
 }				t_list;
 
-int				ft_strnlen(char *str, char c);
-char			*ft_strnjoin(char *s1, char *s2, char c);
-char			*ft_stranjoin(char *s1, char *s2, char c);
-char			*ft_strcut(char *s, char c);
-char			*ft_strandup(char *str, char c);
-char			*ft_strndup(char *str, char c);
-
-int				ft_isint(char *str);
-int				get_next_line(const int fd, char **line);
+t_list			*ft_lstvalmake(t_list **head, char *input, int value);
 void			ft_sa(t_list **head);
 void			ft_sb(t_list **head);
 void			ft_pb(t_list **lista, t_list **listb);
@@ -45,6 +37,17 @@ void			ft_rrb(t_list **listb);
 void			ft_rra(t_list **lista);
 void			ft_ra(t_list **lista);
 void			ft_pa(t_list **lista, t_list **listb);
+
+int				ft_strnlen(char *str, char c);
+char			*ft_strnjoin(char *s1, char *s2, char c);
+char			*ft_stranjoin(char *s1, char *s2, char c);
+char			*ft_strcut(char *s, char c);
+char			*ft_strandup(char *str, char c);
+char			*ft_strndup(char *str, char c);
+
+t_list			*ft_lstdup(t_list *head);
+int				ft_isint(char *str);
+int				get_next_line(const int fd, char **line);
 t_list			*ft_newlstl(int len);
 int				ft_lstlen(t_list *head);
 void			ft_del(void *s, size_t n);
