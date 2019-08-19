@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 10:39:13 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/16 09:39:53 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/08/19 10:56:04 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,9 @@ char			*ft_strcut(char *s, char c);
 char			*ft_strandup(char *str, char c);
 char			*ft_strndup(char *str, char c);
 
+void			ft_lstpush(t_list **head, t_list *node, int pos);
+int				ft_posdif(t_list *head, t_list *check);
+t_list			*ft_lstlast(t_list *head);
 t_list			*ft_lstdup(t_list *head);
 int				ft_isint(char *str);
 int				get_next_line(const int fd, char **line);
