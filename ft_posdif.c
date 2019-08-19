@@ -15,8 +15,7 @@ int		ft_posdif(t_list *head, t_list *check)
 			else
 				break;
 		}
-		if(head == check)
-			return(ret);
+		return(ret);
 	}
 	return('\0');
 }
