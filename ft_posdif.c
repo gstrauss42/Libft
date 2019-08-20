@@ -2,20 +2,35 @@
 
 int		ft_posdif(t_list *head, t_list *check)
 {
-	if(head && check)
+	int i= 0;
+	t_list *hold = head;
+	t_list *tmp = head;
+	if(check->fpos > tmp->fpos)
 	{
-		int ret = 0;
-		while(check->fpos > head->fpos)
+		while(tmp->next && check->fpos > tmp->next->fpos)
 		{
-			if(head->next)
+			if(tmp->fpos > hold->fpos)
+				hold = tmp;
+			if(tmp->next)
 			{
-				ret++;
-				head = head->next;
+				i++;
+				tmp = tmp->next;
 			}
 			else
 				break;
 		}
-		return(ret);
+		if(!tmp->next && check->fpos > tmp->fpos)
+		{
+			i = 0;
+			while(head != hold)
+			{
+				if(head->next)
+					head = head->next;
+				else
+					break;
+				i++;
+			}
+		}
 	}
-	return('\0');
+	return(i);
 }

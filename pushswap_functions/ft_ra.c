@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 14:58:03 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/06 09:31:57 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/08/20 10:18:44 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,6 @@ void	ft_ra(t_list **lista)
 			else
 				break;
 		}
-		tmp->fpos = i;
+		tmp->fpos = i;	
 	}
 }
