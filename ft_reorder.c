@@ -17,17 +17,17 @@ void	ft_reorder(t_list **listb)
 		else
 			break;
 	}
-	while(*listb != ttmp)
+	while((*listb)->fpos != check)
 	{
 		if(ft_lstplen(*listb, ttmp) >= ft_lstlen(*listb) / 2)
 		{
-			write(1, "rrb\n", 4);
-			ft_rrb(listb);
+			write(1, "rra\n", 4);
+			ft_rra(listb);
 		}
 		else
 		{
-			write(1, "rb\n", 3);
-			ft_rb(listb);
+			write(1, "ra\n", 3);
+			ft_ra(listb);
 		}
 	}
 }
