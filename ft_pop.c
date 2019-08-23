@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 10:35:09 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/07/23 11:35:01 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/08/23 14:44:51 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ t_list	*ft_pop(t_list **head, int num)
 {
 	int i;
 
+	if(num != 0)
+		num--;
 	i = 0;
 	t_list	*tmp;
 	t_list	*ret;
