@@ -21,13 +21,13 @@ void	ft_reorder(t_list **listb)
 	{
 		if(ft_lstplen(*listb, ttmp) >= ft_lstlen(*listb) / 2)
 		{
-			write(1, "rra\n", 4);
-			ft_rra(listb);
+			write(1, "rrb\n", 4);
+			ft_rrb(listb);
 		}
 		else
 		{
-			write(1, "ra\n", 3);
-			ft_ra(listb);
+			write(1, "rb\n", 3);
+			ft_rb(listb);
 		}
 	}
 }
