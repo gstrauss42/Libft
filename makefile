@@ -6,7 +6,7 @@
 #    By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/29 15:49:05 by gstrauss          #+#    #+#              #
-#    Updated: 2019/08/19 10:55:39 by gstrauss         ###   ########.fr        #
+#    Updated: 2019/08/23 11:57:04 by gstrauss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ SRCS = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	   ft_lstplen.c ft_del.c ft_lstlen.c ft_newlstl.c get_next_line.c \
 	   ft_strandup.c ft_strcut.c ft_strndup.c ft_strnjoin.c ft_strnlen.c \
 	   ft_isint.c ft_lstdup.c ft_lstvalmake.c ft_lstlast.c ft_posdif.c \
-	   ft_lstpush.c \
+	   ft_lstpush.c ft_reorder.c \
 
 OBJS = ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o \
 	   ft_isdigit.o ft_isprint.o ft_itoa.o ft_memalloc.o ft_memccpy.o \
@@ -50,7 +50,7 @@ OBJS = ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o \
 	   ft_lstplen.o ft_del.o ft_lstlen.o ft_newlstl.o get_next_line.o \
 	   ft_strandup.o ft_strcut.o ft_strndup.o ft_strnjoin.o ft_strnlen.o \
 	   ft_isint.o ft_lstdup.o ft_lstvalmake.o ft_lstlast.o ft_posdif.o \
-	   ft_lstpush.o \
+	   ft_lstpush.o ft_reorder.o \
 
 all: pushswap
 	gcc $(FLAGS) $(SRCS)
