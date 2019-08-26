@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 15:19:46 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/20 11:12:09 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/08/26 16:14:43 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_rra(t_list **lista)
 {
 	if(*lista)
 	{
-		int i;
+		int i = 0;
 		t_list *tmp;
 		tmp = *lista;
 		while(true)

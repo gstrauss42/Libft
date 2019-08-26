@@ -19,7 +19,7 @@ void	ft_reorder(t_list **listb)
 	}
 	while((*listb)->fpos != check)
 	{
-		if(ft_lstplen(*listb, ttmp) >= ft_lstlen(*listb) / 2)
+		if(ft_lstplen(*listb, ttmp) >= (ft_lstlen(*listb) / 2) + 1)
 		{
 			write(1, "rrb\n", 4);
 			ft_rrb(listb);

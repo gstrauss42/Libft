@@ -2,34 +2,34 @@
 
 int		ft_posdif(t_list *head, t_list *check)
 {
-	int i= 0;
-	t_list *hold = head;
-	t_list *tmp = head;
-	if(check->fpos > tmp->fpos)
+	int i = 0;
+	t_list *tmp;
+	t_list *ttmp = head;
+	int val = 1000000;
+
+	while(true)
 	{
-		while(tmp->next && check->fpos > tmp->next->fpos)
+	if(head->fpos > check->fpos && head->fpos < val)
 		{
-			if(tmp->fpos > hold->fpos)
-				hold = tmp;
-			if(tmp->next)
-			{
-				i++;
-				tmp = tmp->next;
-			}
-			else
-				break;
+			tmp = head;
+			val = head->fpos;
 		}
-		if(!tmp->next && check->fpos > tmp->fpos)
+		if(head->next)
+			head = head->next;
+		else
+				break;
+	}
+	head = ttmp;
+	if(val == 1000000)
+	{
+		return(0);
+	}	
+	else
+	{
+		while(head != tmp)
 		{
-			i = 0;
-			while(head != hold)
-			{
-				if(head->next)
-					head = head->next;
-				else
-					break;
-				i++;
-			}
+			head = head->next;
+			i++;
 		}
 	}
 	return(i);
