@@ -6,7 +6,7 @@ int		ft_posdif(t_list *head, t_list *check)
 	t_list *tmp;
 	t_list *ttmp = head;
 	int val = 1000000;
-	if(head->fpos)
+	if(head->fpos && check)
 	{
 		while(true)
 		{

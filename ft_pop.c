@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 10:35:09 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/27 09:52:52 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/08/27 12:50:02 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,49 +14,50 @@
 
 t_list	*ft_pop(t_list **head, int num)
 {
-	int i;
-
-	if(num != 0)
-		num--;
-	i = 0;
-	t_list	*tmp;
-	t_list	*ret;
-	t_list	*before_pop;
-	t_list	*after_pop;
+	t_list *ret;
+	t_list *tmp;
+	t_list *bfor;
 	tmp = *head;
-	if(num < 0)
-		return(NULL);
-	while(i < num - 1 && tmp->next && tmp)
+	int i;
+	i = 1;
+	if(num == 1)
 	{
+		ret = ft_lstnew((char *)tmp->content, tmp->content_size);
+		ret->fpos = (*head)->fpos;
 		if(tmp->next)
-			tmp = tmp->next;
-		else
-			break;
-		i++;
-	}
-	if(i + 1 < num)
-		return(NULL);
-	if(num == 0)
-	{
-		ret = ft_lstnew((char *)(*head)->content, (*head)->content_size);
-		tmp = *head;
-		if((*head)->next)
 		{
-			*head = (*head)->next;
+			*head = tmp->next;
 			ft_lstdelone(&tmp, ft_del);
 		}
 		else
+		{
+			ret = ft_lstnew((char *)tmp->content, tmp->content_size);
 			ft_lstdel(head, ft_del);
+		}
 		return(ret);
 	}
-	before_pop = tmp;
-	if(!tmp->next)
+	while(true)
+	{
+		if(tmp->next)
+		{
+			i++;
+			tmp = tmp->next;
+		}
+		else
+			break;
+		if(i == num)
+			break;
+		bfor = tmp;
+	}
+	if(i != num)
 		return(NULL);
-	tmp = tmp->next;
-	ret = ft_lstnew((char *)tmp->content, tmp->content_size);
-	after_pop = tmp->next;
-	ft_lstdelone(&tmp, ft_del);
-	before_pop->next = after_pop;
+	i = tmp->fpos;
+	ret = ft_lstnew((char*)tmp->content, tmp->content_size);
+	if(tmp->next)
+		bfor->next = tmp->next;
+	else
+		bfor->next = NULL;
+	ret->fpos = i;
 	return(ret);
 }
 /*
@@ -65,8 +66,8 @@ int	main(int argc, char **argv)
 	t_list *test;
 	t_list *tmp;
 	argc = argc + 1;
-	test = ft_lstmake(argv, ' ', 1);
-	tmp = ft_pop(&test, -20);
+	test = ft_lstmake(argv);
+	tmp = ft_pop(&test, 8);
 	while(test)
 	{
 		printf("LIST: %s\n", test->content);
@@ -75,7 +76,6 @@ int	main(int argc, char **argv)
 		else
 			break;
 	}
-	sleep(10);
 	if(tmp)
 		printf("\nPOPPED:%s",(char *) tmp->content);
 	return(0);

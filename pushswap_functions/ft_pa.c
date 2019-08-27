@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/11 10:07:26 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/27 09:52:20 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/08/27 12:54:43 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ void	ft_pa(t_list **lista, t_list **listb)
 		int i = (*listb)->fpos;
 		if(*lista == NULL)
 		{
-			t_list *tmp = ft_pop(listb, 0);
+			t_list *tmp = ft_pop(listb, 1);
 			ft_lstezmake(lista, tmp->content);
 			(*lista)->fpos = i;
 		}
 		else
 		{
-			t_list *tmp = ft_pop(listb, 0);
+			t_list *tmp = ft_pop(listb, 1);
 			ft_lstadd(lista, tmp);
 			(*lista)->fpos = i;
 		}

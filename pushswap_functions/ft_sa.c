@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/10 14:52:26 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/20 10:19:08 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/08/27 12:56:10 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_sa(t_list **head)
 	{
 		int i;
 		i = (*head)->next->fpos;
-		t_list *tmp = ft_pop(head, 1);
+		t_list *tmp = ft_pop(head, 2);
 		ft_lstadd(head, tmp);
 		(*head)->fpos = i;
 	}
