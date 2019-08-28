@@ -6,14 +6,14 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 10:39:13 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/28 09:23:48 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/08/28 13:33:42 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-#include <stdbool.h>
+# include <stdbool.h>
 # include <stdio.h>
 # include <unistd.h>
 # include <string.h>
@@ -25,7 +25,7 @@ typedef struct	s_list
 	char			*content;
 	size_t			content_size;
 	struct s_list	*next;
-	int 			fpos;
+	int				fpos;
 }				t_list;
 
 int				ft_isgreater(t_list *listb, t_list *node);

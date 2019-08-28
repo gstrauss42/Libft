@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/16 07:12:06 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/27 09:15:06 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/08/28 13:17:04 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ int		ft_lstlen(t_list *head)
 	int count;
 
 	count = 0;
-	if(head)
+	if (head)
 		count++;
-	while(head && head->next)
+	while (head && head->next)
 	{
 		count++;
 		head = head->next;
 	}
-	return(count);
+	return (count);
 }

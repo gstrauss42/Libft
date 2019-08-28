@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/15 12:58:59 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/27 09:14:56 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/08/28 13:18:56 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,23 @@
 
 int		ft_lstplen(t_list *head, t_list *node)
 {
-	int i = 0;
-	t_list *temp;
+	int		i;
+	t_list	*temp;
 
-	if(head && node)
+	i = 0;
+	if (head && node)
 	{
 		i++;
 		temp = head;
 		i = 0;
-		while(temp != node)
+		while (temp != node)
 		{
-			if(temp->next)
+			if (temp->next)
 				temp = temp->next;
 			else
-				break;
+				break ;
 			i++;
 		}
 	}
-	return(i);
+	return (i);
 }

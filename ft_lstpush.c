@@ -1,34 +1,48 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstpush.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/08/28 13:19:09 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/08/28 13:31:49 by gstrauss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_lstpush(t_list **head, t_list *node, int pos)
 {
-	t_list *tmp;
-	t_list *tmph = *head;
-	if(ft_lstlen(*head) + 1 == pos)
+	t_list	*tmp;
+	t_list	*tmph;
+
+	tmph = *head;
+	if (ft_lstlen(*head) + 1 == pos)
 	{
 		ft_lstend(*head, node);
-		return;
+		return ;
 	}
-	if(pos == 0)
+	if (pos == 0)
 	{
 		ft_lstadd(head, node);
-		return;
+		return ;
 	}
-	if(pos == 1)
+	if (pos == 1)
 		tmp = *head;
-	while(pos != 0)
+	while (pos != 0)
 	{
-		if(tmph->next)
+		if (tmph->next)
 		{
 			tmph = tmph->next;
 			pos--;
 		}
 		else
-			break;
-		if(pos != 0)
+			break ;
+		if (pos != 0)
 			tmp = tmph;
 	}
-	if(pos == 0)
+	if (pos == 0)
 	{
 		node->next = tmp->next;
 		tmp->next = node;
