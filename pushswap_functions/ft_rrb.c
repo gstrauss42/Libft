@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 09:21:11 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/23 14:44:21 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/08/28 11:29:26 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_rrb(t_list **listb)
 {
-	if(*listb)
+	if((*listb)->next)
 	{
 		int i;
 		t_list *tmp;

@@ -1,13 +1,13 @@
 #include "libft.h"
 
-void	ft_reorder(t_list **listb)
+void	ft_reorder(t_list **lista)
 {
-	t_list *tmp = (*listb);
+	t_list *tmp = (*lista);
 	t_list *ttmp;
-	int check = -1;
+	int check = 1000000;
 	while(true)
 	{
-		if(tmp->fpos > check)
+		if(tmp->fpos < check)
 		{
 			ttmp = tmp;
 			check = tmp->fpos;
@@ -17,17 +17,17 @@ void	ft_reorder(t_list **listb)
 		else
 			break;
 	}
-	while((*listb)->fpos != check)
+	while((*lista)->fpos != check)
 	{
-		if(ft_lstplen(*listb, ttmp) >= (ft_lstlen(*listb) / 2) + 1)
+		if(ft_lstplen(*lista, ttmp) >= (ft_lstlen(*lista) / 2) + 1)
 		{
-			write(1, "rrb\n", 4);
-			ft_rrb(listb);
+			write(1, "rra\n", 4);
+			ft_rra(lista);
 		}
 		else
 		{
-			write(1, "rb\n", 3);
-			ft_rb(listb);
+			write(1, "ra\n", 3);
+			ft_ra(lista);
 		}
 	}
 }

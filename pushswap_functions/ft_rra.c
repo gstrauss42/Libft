@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 15:19:46 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/27 12:55:22 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/08/28 11:29:11 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_rra(t_list **lista)
 {
-	if(*lista)
+	if((*lista)->next)
 	{
 		int i = 0;
 		t_list *tmp;
