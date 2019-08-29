@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 10:39:13 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/28 13:33:42 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/08/29 09:12:44 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct	s_list
 	int				fpos;
 }				t_list;
 
+void			ft_lstcheck(t_list *lista, t_list *listb);
 int				ft_isgreater(t_list *listb, t_list *node);
 void			ft_reorder(t_list **listb);
 t_list			*ft_lstvalmake(t_list **head, char *input, int value);

@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/28 13:28:45 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/28 13:28:49 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/08/29 09:18:37 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void	ft_reorder(t_list **lista)
 		else
 			break ;
 	}
-	while ((*lista)->fpos != check)
+	while ((*lista)->fpos != ttmp->fpos)
 	{
 		if (ft_lstplen(*lista, ttmp) >= (ft_lstlen(*lista) / 2) + 1)
 		{
