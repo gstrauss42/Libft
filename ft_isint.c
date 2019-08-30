@@ -6,11 +6,25 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/26 12:56:22 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/29 09:19:41 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/08/30 12:06:50 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static int	check1(char *tmp, int p, char *str)
+{
+	while (str[p])
+	{
+		if (!tmp[p] || str[p] > tmp[p])
+			return (0);
+		else if (tmp[p] == str[p])
+			p++;
+		else if (tmp[p] < str[p])
+			break ;
+	}
+	return (1);
+}
 
 static int	check(char *tmp, char *str)
 {
@@ -32,15 +46,8 @@ static int	check(char *tmp, char *str)
 	}
 	else
 	{
-		while (str[p])
-		{
-			if (!tmp[p] || str[p] > tmp[p])
-				return (0);
-			else if (tmp[p] == str[p])
-				p++;
-			else if (tmp[p] < str[p])
-				break ;
-		}
+		if (check1(tmp, p, str) == 0)
+			return (0);
 	}
 	return (1);
 }
