@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 10:35:09 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/30 09:51:23 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/08/30 10:16:02 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_list	*ft_pop(t_list **head, int num)
 	ret = NULL;
 	i = 1;
 	if (num == 1)
-		return(ret1 (ret, tmp, head));
+		return (ret1(ret, tmp, head));
 	while (true)
 	{
 		bfor = tmp;

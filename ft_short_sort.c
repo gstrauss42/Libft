@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/30 09:05:47 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/30 10:06:35 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/08/30 10:14:37 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,19 @@
 void	ft_short_sort(t_list **lista, t_list **listb, int i)
 {
 	*listb = NULL;
-	if(i == 3)
+	if (i == 2)
 	{
-		if((*lista)->fpos == 3)
+		ft_sa(lista);
+		write(1, "sa\n", 3);
+		return ;
+	}
+	if (i == 3)
+	{
+		if ((*lista)->fpos == 3)
 		{
 			ft_ra(lista);
 			write(1, "ra\n", 3);
-			if((*lista)->fpos == 1)
+			if ((*lista)->fpos == 1)
 				return ;
 			else
 			{
@@ -30,17 +36,17 @@ void	ft_short_sort(t_list **lista, t_list **listb, int i)
 				return ;
 			}
 		}
-		if((*lista)->fpos == 1)
+		if ((*lista)->fpos == 1)
 		{
 			ft_rra(lista);
 			write(1, "rra\n", 4);
 			ft_sa(lista);
-			write(1 , "sa\n", 3);
+			write(1, "sa\n", 3);
 			return ;
 		}
 		else
 		{
-			if((*lista)->next->fpos == 1)
+			if ((*lista)->next->fpos == 1)
 			{
 				ft_sa(lista);
 				write(1, "sa\n", 3);
@@ -53,5 +59,8 @@ void	ft_short_sort(t_list **lista, t_list **listb, int i)
 				return ;
 			}
 		}
+	}
+	if (i == 5)
+	{
 	}
 }
