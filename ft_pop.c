@@ -6,11 +6,13 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 10:35:09 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/29 08:57:15 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/08/30 09:51:23 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+t_list	*ret1(t_list *ret, t_list *tmp, t_list **head);
 
 t_list	*ft_pop(t_list **head, int num)
 {
@@ -20,25 +22,13 @@ t_list	*ft_pop(t_list **head, int num)
 	t_list	*bfor;
 
 	tmp = *head;
+	ret = NULL;
 	i = 1;
 	if (num == 1)
-	{
-		ret = ft_lstnew((char *)tmp->content, tmp->content_size);
-		ret->fpos = (*head)->fpos;
-		if (tmp->next)
-		{
-			*head = tmp->next;
-			ft_lstdelone(&tmp, ft_del);
-		}
-		else
-		{
-			ret = ft_lstnew((char *)tmp->content, tmp->content_size);
-			ft_lstdel(head, ft_del);
-		}
-		return (ret);
-	}
+		return(ret1 (ret, tmp, head));
 	while (true)
 	{
+		bfor = tmp;
 		if (tmp->next)
 		{
 			i++;
@@ -48,7 +38,6 @@ t_list	*ft_pop(t_list **head, int num)
 			break ;
 		if (i == num)
 			break ;
-		bfor = tmp;
 	}
 	if (i != num)
 		return (NULL);
@@ -59,5 +48,22 @@ t_list	*ft_pop(t_list **head, int num)
 	else
 		bfor->next = NULL;
 	ret->fpos = i;
+	return (ret);
+}
+
+t_list	*ret1(t_list *ret, t_list *tmp, t_list **head)
+{
+	ret = ft_lstnew((char *)tmp->content, tmp->content_size);
+	ret->fpos = (*head)->fpos;
+	if (tmp->next)
+	{
+		*head = tmp->next;
+		ft_lstdelone(&tmp, ft_del);
+	}
+	else
+	{
+		ret = ft_lstnew((char *)tmp->content, tmp->content_size);
+		ft_lstdel(head, ft_del);
+	}
 	return (ret);
 }

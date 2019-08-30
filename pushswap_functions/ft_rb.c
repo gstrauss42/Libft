@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 09:24:06 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/28 13:43:06 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/08/30 09:30:23 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_rb(t_list **listb)
 	int		i;
 	t_list	*tmp;
 
-	if ((*listb)->next)
+	if (*listb && (*listb)->next)
 	{
 		i = (*listb)->fpos;
 		tmp = ft_pop(listb, 1);

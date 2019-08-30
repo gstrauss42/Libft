@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 15:19:46 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/28 13:38:36 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/08/30 09:31:17 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_rra(t_list **lista)
 
 	tmp = *lista;
 	i = 0;
-	if ((*lista)->next)
+	if (*lista && (*lista)->next)
 	{
 		while (true)
 		{
