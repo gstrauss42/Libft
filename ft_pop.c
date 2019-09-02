@@ -6,14 +6,14 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 10:35:09 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/30 12:13:19 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/09/02 10:59:09 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 t_list	*ret1(t_list *ret, t_list *tmp, t_list **head);
-t_list	*spacesaver(t_list *tmp, t_list *ret, t_list *bfor, int i);
+t_list	*spacesaver(t_list *tmp, t_list *ret, t_list *bfor, int i, t_list **head);
 
 t_list	*ft_pop(t_list **head, int num)
 {
@@ -40,7 +40,7 @@ t_list	*ft_pop(t_list **head, int num)
 	}
 	if (i != num)
 		return (NULL);
-	return (spacesaver(tmp, ret, bfor, i));
+	return (spacesaver(tmp, ret, bfor, i, head));
 }
 
 t_list	*ret1(t_list *ret, t_list *tmp, t_list **head)
@@ -60,7 +60,7 @@ t_list	*ret1(t_list *ret, t_list *tmp, t_list **head)
 	return (ret);
 }
 
-t_list	*spacesaver(t_list *tmp, t_list *ret, t_list *bfor, int i)
+t_list	*spacesaver(t_list *tmp, t_list *ret, t_list *bfor, int i, t_list **head)
 {
 	i = tmp->fpos;
 	ret = ft_lstnew((char*)tmp->content, tmp->content_size);
@@ -69,5 +69,9 @@ t_list	*spacesaver(t_list *tmp, t_list *ret, t_list *bfor, int i)
 	else
 		bfor->next = NULL;
 	ret->fpos = i;
+	if(!(*head)->next)
+		ft_lstdel(head, ft_del);
+/*	else
+		ft_lstdel(head, ft_del);*/
 	return (ret);
 }

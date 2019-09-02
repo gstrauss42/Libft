@@ -6,11 +6,29 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 08:56:15 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/09/02 08:56:23 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/09/02 10:33:01 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+int		important(t_list **lista, t_list **listb, t_list *tmp, int y)
+{
+	if (ft_lstplen(*listb, tmp) > (ft_lstlen(*listb)\
+				/ 2 && ft_lstlen(*listb) > 2))
+	{
+		y = ft_lstlen(*listb) - ft_lstplen(*listb, tmp) + 1;
+		if (ft_posdif(*lista, tmp) != 0)
+			y = y + ft_posdif(*lista, tmp);
+	}
+	else if (ft_lstplen(*listb, tmp) <= (ft_lstlen(*listb) / 2))
+	{
+		y = ft_lstplen(*listb, tmp) + 1;
+		if (ft_posdif(*lista, tmp) != 0)
+			y = y + ft_posdif(*lista, tmp);
+	}
+	return (y);
+}
 
 void	algo(t_list **lista, t_list **listb)
 {
@@ -19,7 +37,6 @@ void	algo(t_list **lista, t_list **listb)
 	int		check;
 	int		y;
 
-	y = 0;
 	tmp = *listb;
 	while (tmp && *lista)
 	{
@@ -29,21 +46,7 @@ void	algo(t_list **lista, t_list **listb)
 		while (tmp)
 		{
 			if (tmp)
-			{
-				if (ft_lstplen(*listb, tmp) > (ft_lstlen(*listb)\
-							/ 2 && ft_lstlen(*listb) > 2))
-				{
-					y = ft_lstlen(*listb) - ft_lstplen(*listb, tmp) + 1;
-					if (ft_posdif(*lista, tmp) != 0)
-						y = y + ft_posdif(*lista, tmp);
-				}
-				else if (ft_lstplen(*listb, tmp) <= (ft_lstlen(*listb) / 2))
-				{
-					y = ft_lstplen(*listb, tmp) + 1;
-					if (ft_posdif(*lista, tmp) != 0)
-						y = y + ft_posdif(*lista, tmp);
-				}
-			}
+				y = important(lista, listb, tmp, y);
 			if (y < check)
 			{
 				check = y;
