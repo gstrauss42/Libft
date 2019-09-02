@@ -6,11 +6,24 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/30 13:42:17 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/09/02 09:42:40 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/09/02 09:55:52 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+void	p1(t_list **lista, t_list **listb, t_list *node)
+{
+	ft_rb(listb);
+	if (ft_posdif(*lista, node) != 0 && ft_lstlen(*listb)\
+			/ 2 < ft_lstplen(*listb, node) && *listb != node)
+	{
+		ft_ra(lista);
+		write(1, "rr\n", 4);
+	}
+	else
+		write(1, "rb\n", 4);
+}
 
 void	t1(t_list **lista, t_list **listb, t_list *node)
 {
@@ -32,17 +45,7 @@ void	t1(t_list **lista, t_list **listb, t_list *node)
 					write(1, "rrb\n", 4);
 			}
 			else
-			{
-				ft_rb(listb);
-				if (ft_posdif(*lista, node) != 0 && ft_lstlen(*listb)\
-						/ 2 < ft_lstplen(*listb, node) && *listb != node)
-				{
-					ft_ra(lista);
-					write(1, "rr\n", 4);
-				}
-				else
-					write(1, "rb\n", 4);
-			}
+				p1(lista, listb, node);
 		}
 	}
 }
