@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 08:56:15 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/09/02 10:33:01 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/09/07 03:29:29 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,20 +38,16 @@ void	algo(t_list **lista, t_list **listb)
 	int		y;
 
 	tmp = *listb;
-	while (tmp && *lista)
+	while ((tmp && *lista) || (y = 0))
 	{
-		y = 0;
 		check = 10000000;
 		tmp = *listb;
 		while (tmp)
 		{
 			if (tmp)
 				y = important(lista, listb, tmp, y);
-			if (y < check)
-			{
-				check = y;
+			if (y < check && (check = y))
 				ret = tmp;
-			}
 			if (tmp->next)
 				tmp = tmp->next;
 			else
