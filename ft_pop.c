@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 10:35:09 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/09/07 03:34:02 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/09/09 08:58:25 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,5 +75,7 @@ t_list	*spacesaver(t_list *tmp, t_list *ret,\
 	ret->fpos = i;
 	if (!(*head)->next)
 		ft_lstdel(head, ft_del);
+/*	else
+		ft_lstdelone(&tmp, ft_del);*/ //fixes leaks but breaks pushswap
 	return (ret);
 }
