@@ -14,23 +14,16 @@
 
 void	ft_rra(t_list **lista)
 {
-	int		i;
-	t_list	*tmp;
-
-	tmp = *lista;
-	i = 0;
+	t_list  *tmp;
+	t_list  *bfor;
+	bfor = *lista;
 	if (*lista && (*lista)->next)
 	{
-		while (true)
-		{
-			if (tmp->next)
-				tmp = tmp->next;
-			else
-				break ;
-		}
-		i = tmp->fpos;
-		tmp = ft_pop(lista, ft_lstlen(*lista));
-		ft_lstadd(lista, tmp);
-		(*lista)->fpos = i;
+		while (bfor->next->next)
+			bfor = bfor->next;
+		tmp = bfor->next;
+		bfor->next = NULL;
+		tmp->next = NULL;
+		ft_lstadd(lista, tmp);	
 	}
 }
