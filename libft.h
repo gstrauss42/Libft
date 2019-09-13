@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 10:39:13 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/09/09 08:45:27 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/09/11 13:04:37 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@
 
 typedef struct	s_list
 {
+	int				fpos;
 	char			*content;
 	size_t			content_size;
 	struct s_list	*next;
-	int				fpos;
 }				t_list;
 
 void			order(t_list **lista);

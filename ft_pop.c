@@ -1,81 +1,80 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_pop.c                                           :+:      :+:    :+:   */
+/*   tmp.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/07/17 10:35:09 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/09/09 08:58:25 by gstrauss         ###   ########.fr       */
+/*   Created: 2019/09/11 09:34:45 by gstrauss          #+#    #+#             */
+/*   Updated: 2019/09/13 10:44:35 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ret1(t_list *ret, t_list *tmp, t_list **head);
-t_list	*spacesaver(t_list *tmp, t_list *ret,\
-		t_list *bfor, t_list **head);
+t_list	*first(t_list **head, t_list *ret);
+t_list	*end(t_list **head, t_list *ret);
 
-t_list	*ft_pop(t_list **head, int num)
+t_list	*ft_pop(t_list **head, int pos)
 {
-	int		i;
-	t_list	*ret;
-	t_list	*tmp;
-	t_list	*bfor;
+	t_list *tmp;
+	t_list *bfor;
+	t_list *ret;
 
-	tmp = *head;
 	ret = NULL;
-	i = 1;
-	if (num == 1)
-		return (ret1(ret, tmp, head));
-	while (true)
+	if (ft_lstlen(*head) < pos || pos <= 0)
+		return (NULL);
+	if (pos == 1)
+		return (first(head, ret));
+	tmp = *head;
+	while (pos != 1)
 	{
 		bfor = tmp;
-		if (tmp->next)
-			tmp = tmp->next;
-		else
-			break ;
-		i++;
-		if (i == num)
-			break ;
+		tmp = tmp->next;
+		pos--;
 	}
-	if (i != num)
-		return (NULL);
-	return (spacesaver(tmp, ret, bfor, head));
+	ret = ft_lstnew((char *)tmp->content, tmp->content_size);
+	bfor->next = tmp->next;
+	ft_lstdelone(&tmp, ft_del);
+	return (ret);
 }
 
-t_list	*ret1(t_list *ret, t_list *tmp, t_list **head)
+t_list	*first(t_list **head, t_list *ret)
 {
-	ret = ft_lstnew((char *)tmp->content, tmp->content_size);
-	ret->fpos = (*head)->fpos;
-	if (tmp->next)
+	t_list *tmp;
+
+	tmp = (*head);
+	if ((*head)->next)
 	{
-		*head = tmp->next;
+		ret = ft_lstnew((char *)(*head)->content, (*head)->content_size);
+		(*head) = (*head)->next;
 		ft_lstdelone(&tmp, ft_del);
 	}
 	else
 	{
-		ret = ft_lstnew((char *)tmp->content, tmp->content_size);
+		ret = ft_lstnew((char *)(*head)->content, (*head)->content_size);
 		ft_lstdel(head, ft_del);
 	}
 	return (ret);
 }
 
-t_list	*spacesaver(t_list *tmp, t_list *ret,\
-		t_list *bfor, t_list **head)
+t_list	*end(t_list **head, t_list *ret)
 {
-	int i;
+	t_list *tmp;
+	t_list *bfor;
 
-	i = tmp->fpos;
-	ret = ft_lstnew((char*)tmp->content, tmp->content_size);
-	if (tmp->next)
-		bfor->next = tmp->next;
-	else
-		bfor->next = NULL;
-	ret->fpos = i;
-	if (!(*head)->next)
-		ft_lstdel(head, ft_del);
-/*	else
-		ft_lstdelone(&tmp, ft_del);*/ //fixes leaks but breaks pushswap
+	tmp = *head;
+	while (true)
+	{
+		if (tmp->next)
+			bfor = tmp;
+		if (tmp->next)
+			tmp = tmp->next;
+		else
+			break ;
+	}
+	ret = ft_lstnew((char *)(*head)->content, (*head)->content_size);
+	ft_lstdelone(&tmp, ft_del);
+	bfor->next = NULL;
 	return (ret);
 }

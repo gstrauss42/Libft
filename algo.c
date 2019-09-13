@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 08:56:15 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/09/07 03:29:29 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/09/13 10:45:54 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	algo(t_list **lista, t_list **listb)
 	int		y;
 
 	tmp = *listb;
-	while ((tmp && *lista) || (y = 0))
+	while ((tmp && *listb) || (y = 0))
 	{
 		check = 10000000;
 		tmp = *listb;
@@ -53,7 +53,7 @@ void	algo(t_list **lista, t_list **listb)
 			else
 				break ;
 		}
-		if (*lista)
+		if (*listb && ret->content)
 			perform(lista, listb, ret);
 		ret = *listb;
 	}
