@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/19 09:30:49 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/30 09:34:10 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/09/13 12:21:41 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 void	ft_sb(t_list **listb)
 {
-	int		i;
 	t_list	*tmp;
 
 	if (*listb && (*listb)->next)
 	{
-		i = (*listb)->next->fpos;
-		tmp = ft_pop(listb, 2);
-		ft_lstadd(listb, tmp);
-		(*listb)->fpos = i;
+		tmp = *listb;
+		*listb = tmp->next;
+		tmp->next = (*listb)->next;
+		(*listb)->next = tmp;
 	}
 }

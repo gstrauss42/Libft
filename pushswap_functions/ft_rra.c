@@ -6,7 +6,7 @@
 /*   By: gstrauss <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/07/17 15:19:46 by gstrauss          #+#    #+#             */
-/*   Updated: 2019/08/30 09:31:17 by gstrauss         ###   ########.fr       */
+/*   Updated: 2019/09/13 12:24:14 by gstrauss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 void	ft_rra(t_list **lista)
 {
-	t_list  *tmp;
-	t_list  *bfor;
+	t_list	*tmp;
+	t_list	*bfor;
+
 	bfor = *lista;
 	if (*lista && (*lista)->next)
 	{
@@ -24,6 +25,6 @@ void	ft_rra(t_list **lista)
 		tmp = bfor->next;
 		bfor->next = NULL;
 		tmp->next = NULL;
-		ft_lstadd(lista, tmp);	
+		ft_lstadd(lista, tmp);
 	}
 }
