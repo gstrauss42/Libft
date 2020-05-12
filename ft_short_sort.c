@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-void	last(t_list **lista, t_list **listb);
 void	n3(t_list **lista);
 void	n5(t_list **lista, t_list **listb);
+void	location_push(t_list ** lista, t_list **listb, int counter);
 
 void	ft_short_sort(t_list **lista, t_list **listb, int i)
 {
@@ -31,43 +31,37 @@ void	ft_short_sort(t_list **lista, t_list **listb, int i)
 	}
 	if (i == 5)
 	{
-		ft_pb(lista, listb);
-		ft_pb(lista, listb);
-		write(1, "pb\npb\n", 6);
-		n3(lista);
-		if ((*listb)->fpos < (*listb)->next->fpos)
-		{
-			ft_sb(listb);
-			write(1, "sb\n", 3);
-		}
 		n5(lista, listb);
+		n3(lista);
+		if((*listb)->fpos == 4)
+			write(1, "sb\n", 3);
+		write(1, "pa\npa\nra\nra\n", 12);
 		return ;
 	}
 }
 
+// check this one for leaks
 void	n5(t_list **lista, t_list **listb)
 {
-	if ((*lista)->next->fpos > (*listb)->fpos)
+	t_list	*temp;
+	int		counter;
+	int		check;
+
+	check	= 0;
+	counter = 1;
+	while(check != 2)
 	{
-		ft_pa(lista, listb);
-		write(1, "pa\n", 3);
-		if ((*lista)->next->fpos < (*lista)->fpos)
+		temp	= *lista;
+		while(temp->next)
 		{
-			ft_sa(lista);
-			write(1, "sa\n", 3);
+			if(temp->fpos == 4 || temp->fpos == 5)
+				break;
+			temp=temp->next;
+			counter++;
 		}
-		ft_pa(lista, listb);
-		write(1, "pa\n", 3);
-		if ((*lista)->next->fpos < (*lista)->fpos)
-		{
-			ft_sa(lista);
-			write(1, "sa\n", 3);
-		}
-	}
-	else
-	{
-		last(lista, listb);
-		last(lista, listb);
+		location_push(lista, listb, counter);
+		counter = 1;
+		check++;
 	}
 }
 
@@ -90,46 +84,28 @@ void	n3(t_list **lista)
 	}
 }
 
-void	extend(t_list **lista, t_list **listb)
+void	location_push(t_list ** lista, t_list **listb, int counter)
 {
-	if (*listb && (*listb)->fpos > (*lista)->next->fpos)
+	if(counter > 3)
 	{
-		ft_pa(lista, listb);
-		write(1, "pa\n", 3);
-		if ((*lista)->fpos > (*lista)->next->fpos)
+		while(counter != 6)
 		{
-			ft_sa(lista);
-			write(1, "sa\n", 3);
-			ft_ra(lista);
-			write(1, "ra\n", 3);
-			ft_sa(lista);
-			write(1, "sa\n", 3);
+			ft_rra(lista);
+			write(1, "rra\n", 4);
+			counter++;
 		}
-		ft_rra(lista);
-		write(1, "rra\n", 4);
+		ft_pb(lista, listb);
+		write(1, "pb\n", 3);
 	}
-}
-
-void	last(t_list **lista, t_list **listb)
-{
-	if (*listb && (*listb)->fpos < (*lista)->fpos)
+	else
 	{
-		ft_pa(lista, listb);
-		write(1, "pa\n", 3);
-		if ((*lista)->fpos > (*lista)->next->fpos)
-		{
-			ft_sa(lista);
-			write(1, "sa\n", 3);
-		}
-		if ((*lista)->next->fpos > (*lista)->next->next->fpos)
+		while(counter != 1)
 		{
 			ft_ra(lista);
 			write(1, "ra\n", 3);
-			ft_sa(lista);
-			write(1, "sa\n", 3);
-			ft_rrb(lista);
-			write(1, "rrb\n", 4);
+			counter--;
 		}
+		ft_pb(lista, listb);
+		write(1, "pb\n", 3);
 	}
-	extend(lista, listb);
 }
