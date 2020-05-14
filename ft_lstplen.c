@@ -20,9 +20,7 @@ int		ft_lstplen(t_list *head, t_list *node)
 	i = 0;
 	if (head && node)
 	{
-		i++;
 		temp = head;
-		i = 0;
 		while (temp != node)
 		{
 			if (temp->next)
