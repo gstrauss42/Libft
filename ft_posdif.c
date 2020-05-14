@@ -24,14 +24,14 @@ int			ft_posdif(t_list *head, t_list *check)
 	ttmp = head;
 	hold = head;
 	val = 1000000;
-	while (head->fpos && check) // go through stack
+	while (head->fpos && check)
 	{
-		if (head->fpos > check->fpos && head->fpos < val) //find the value after node with fpos greater than check
+		if (head->fpos > check->fpos && head->fpos < val)
 		{
 			tmp = head;
 			val = head->fpos;
 		}
-		if (head->fpos > hold->fpos) // finds the biggest fpos value
+		if (head->fpos > hold->fpos)
 			hold = head;
 		if (head->next)
 			head = head->next;
@@ -39,7 +39,7 @@ int			ft_posdif(t_list *head, t_list *check)
 			break ;
 	}
 	head = ttmp;
-	return (ft_extra(head, tmp, val, hold)); //hold : biggest fpos || val : fpos of next node greater than check || head : head of list || tmp : next greatest node after check
+	return (ft_extra(head, tmp, val, hold));
 }
 
 static int	ft_extra(t_list *head, t_list *tmp, int val, t_list *hold)
@@ -47,7 +47,7 @@ static int	ft_extra(t_list *head, t_list *tmp, int val, t_list *hold)
 	int i;
 
 	i = 0;
-	if (val == 1000000) // position of the greatest fpos
+	if (val == 1000000)
 	{
 		while (head != hold)
 		{
@@ -55,7 +55,7 @@ static int	ft_extra(t_list *head, t_list *tmp, int val, t_list *hold)
 			i++;
 		}
 	}
-	else // position of the
+	else
 	{
 		while (head != tmp)
 		{
